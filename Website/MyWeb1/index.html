@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<title>dsad</title>
+        <style>
+			.nodes{
+				font-size:18px;
+				width:8em;
+				height:1.6em;
+				color:#00F;
+				background-color:#0F0;
+				position:absolute;
+				cursor:pointer;
+				z-index:1000;
+			}
+			.lines{
+				position:absolute;
+				z-index:100;
+			}
+        </style>
+	</head>
+	<body>
+    	<input type="button" value="Create" id="btn_create" />
+        <script type="text/javascript">
+			var index = 0;
+			function nodesCreate(){
+				var node = document.createElement('div');
+				node.className = 'nodes';
+				node.onmousedown = nodeMove;
+				document.body.appendChild(node);
+				index++;
+				node.index = index;
+				if(index > 1){
+					var line = document.createElement('hr');
+					line.className = 'lines';
+					line.color = "#000";
+					lineStyle(line,index);
+					document.body.appendChild(line);
+				}
+			}
+			function lineStyle(line,index){
+				var nodes = document.getElementsByClassName('nodes');
+				var perX = nodes[index-1].offsetLeft - nodes[index-2].offsetLeft,
+					perY = nodes[index-1].offsetTop - nodes[index-2].offsetTop,
+					l = Math.floor(Math.sqrt(perX*perX + perY*perY));
+				var x = 0.5*(nodes[index-1].offsetLeft + nodes[index-2].offsetLeft + nodes[index-1].offsetWidth);
+				var y = 0.5*(nodes[index-1].offsetTop + nodes[index-2].offsetTop + nodes[index-1].offsetHeight);
+				var angle = Math.PI/2 - Math.atan(perX/perY);
+				line.width = l;
+				line.style.left = x - (l/2) + 'px';
+				line.style.top = y + 'px';
+				line.style.transform = 'rotate(' +angle+ 'rad)';
+			}
+			function nodeMove(){
+				var This = this,
+					e = event || document.event,
+					posX = e.clientX - This.offsetLeft,
+					posY = e.clientY - This.offsetTop;
+				document.onmousemove = function(e){
+					var e = event || document.event;
+					This.style.left = e.clientX - posX + 'px';
+					This.style.top = e.clientY - posY + 'px';
+					if((This.index >= 2) && (This.index != index)){
+						lineStyle(document.getElementsByClassName('lines')[This.index-1],This.index + 1);
+						lineStyle(document.getElementsByClassName('lines')[This.index-2],This.index);
+					}
+					if((This.index != 1) && (This.index == index)){
+						lineStyle(document.getElementsByClassName('lines')[This.index-2],This.index);
+					}
+					if((This.index == 1) && (This.index != index)){
+						lineStyle(document.getElementsByClassName('lines')[This.index-1],This.index + 1);
+					}
+				}
+				document.onmouseup = function(){
+					document.onmousemove = null;
+					document.onmousedown = null;
+				}
+			}
+			document.getElementById('btn_create').onclick = nodesCreate;
+		</script>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>脑图UI设计</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+	<div id="title">脑图UI设计</div>
+	<div id="sub-title">
+		<div id="input">
+            <div>请输入主题内容：</div>
+            <input type="text" id="input-text"/>
+        </div>
+        <div><span id="insert" class="btn">插入</span></div>
+        <div><span id="delete" class="btn">删除</span><span id="edit" class="btn">编辑</span></div>
+        <div id="order">
+            <span class="order ban">×</span><span class="order one">1</span><span class="order two">2</span><span class="order three">3</span><span class="order four">4</span><span class="order five">5</span><span class="order six">6</span><span class="order seven">7</span><span class="order eight">8</span><span class="order nine">9</span>
+        </div>
+        <div id="text-style">
+            <span id="btn-size" class="change">字号▾</span>
+            <ul id="text-size">
+                <li title="10px">10px</li><li title="12px">12px</li><li title="16px">16px</li><li title="18px">18px</li><li title="24px">24px</li><li title="32px">32px</li><li title="48px">48px</li>
+            </ul>
+            <span id="text-bolder" class="state">B</span> <span id="text-incline" class="state">I</span> <span id="btn-color" class="change">A&nbsp; &nbsp; &nbsp; ▾</span>
+            <ul id="text-color">
+                <li title="#000"></li><li title="#222"></li><li title="#666"></li><li title="#888"></li><li title="#ccc"></li><li title="#eee"></li><li title="#500"></li><li title="#700"></li><li title="#900"></li><li title="#b00"></li><li title="#d00"></li><li title="#f00"></li><li title="#050"></li><li title="#070"></li><li title="#090"></li><li title="#0b0"></li><li title="#0d0"></li><li title="#0f0"></li><li title="#005"></li><li title="#007"></li><li title="#009"></li><li title="#00b"></li><li title="#00d"></li><li title="#00f"></li><li title="#550"></li><li title="#770"></li><li title="#990"></li><li title="#bb0"></li><li title="#dd0"></li><li title="#ff0"></li><li title="#055"></li><li title="#077"></li><li title="#099"></li><li title="#0bb"></li><li title="#0dd"></li><li title="#0ff"></li><li title="#505"></li><li title="#707"></li><li title="#909"></li><li title="#b0b"></li><li title="#d0d"></li><li title="#f0f"></li>
+                <div class="clear-float"></div>
+            </ul>
+            <span id="btn-bgcolor" class="change">背景▾</span>
+            <ul id="text-bgcolor">
+                <li title="#000"></li><li title="#222"></li><li title="#666"></li><li title="#888"></li><li title="#ccc"></li><li title="#eee"></li><li title="#500"></li><li title="#700"></li><li title="#900"></li><li title="#b00"></li><li title="#d00"></li><li title="#f00"></li><li title="#050"></li><li title="#070"></li><li title="#090"></li><li title="#0b0"></li><li title="#0d0"></li><li title="#0f0"></li><li title="#005"></li><li title="#007"></li><li title="#009"></li><li title="#00b"></li><li title="#00d"></li><li title="#00f"></li><li title="#550"></li><li title="#770"></li><li title="#990"></li><li title="#bb0"></li><li title="#dd0"></li><li title="#ff0"></li><li title="#055"></li><li title="#077"></li><li title="#099"></li><li title="#0bb"></li><li title="#0dd"></li><li title="#0ff"></li><li title="#505"></li><li title="#707"></li><li title="#909"></li><li title="#b0b"></li><li title="#d0d"></li><li title="#f0f"></li>
+                <div class="clear-float"></div>
+            </ul>
+        </div>
+        <div id="photoChange">
+            <span id="insertPhoto" class="btn">插入图片</span>
+            <span id="deletePhoto" class="btn">删除图片</span>
+        </div>
+        <div id="hidden"></div>
+        <input type="file" accept="image/*" id="imageInput" style="height:0;width:0;" />
+    </div>
+    <div id="main-body"></div>
+	<script type="text/javascript" src="js/js.js"></script>
+</body>
+</html>

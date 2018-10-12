@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>某门户网站</title>
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <script type="text/javascript" src="js/js.js"></script>
+</head>
+
+<body style="overflow:scroll;">
+	<div id="shortcutbar"><div>
+    	<table><tbody><tr>
+        	<td><a>无障碍浏览</a></td>
+        	<td><a>繁体版</a></td>
+        	<td><a>English</a></td>
+        	<td><a>纯文本</a></td>
+        	<td><a>引导页</a></td>
+        	<td><a>个性化定制</a></td>
+        	<td><a>政府办公平台登录</a></td>
+        </tr></tbody></table>
+        <div id="photoBtn">
+        	<div><a><img src="img/wb.jpg" height="25px" /></a></div>
+        	<div><a><img src="img/wx.jpg" height="25px" /></a></div>
+        </div>
+        <div id="browserBtn">
+        	<a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage(window.location.href);">设为首页</a> | 
+            <a href="javascript:window.external.AddFavorite(window.location.href, document.title);">加入收藏</a>
+        </div>
+        <div class="clearFloat"></div>
+	</div></div>
+	<div id="nav">
+    	<table cellpadding="0" cellspacing="0"><tbody>
+            <tr>
+                <td width="204px"><img src="img/" width="204px" height="69px" /></td>
+                <td><a href="" class="on">网站首页</a></td>
+                <td><a href="">走进保税区</a></td>
+                <td><a href="">政府资讯</a></td>
+                <td><a href="">政务公开</a></td>
+                <td><a href="">网上办事</a></td>
+                <td><a href="">公共服务</a></td>
+                <td><a href="">互动交流</a></td>
+                <td><a href="">网站导航</a></td>
+                <td width="88px"><a><img src="img/fwz.jpg" width="72px" height="55px" /></a></td>
+                <td width="88px"><a><img src="img/zsz.jpg" width="72px" height="55px" /></a></td>
+            </tr>
+        </tbody></table>
+    </div>
+	<div id="container">
+        <table cellpadding="0" cellspacing="0"><tbody>
+        	<tr><td width="520px">
+                <table id="hot-news">
+                    <tr>
+                        <td class="title">热点要闻</td>
+                        <td align="right">
+                            <input/>
+                            <select name="select" id="select">
+                                <option selected="selected" value="0">站内</option>
+                                <option value="1">站群</option>
+                            </select>
+                            <input type="button" onclick="Search()" value="搜 索" style="border: solid 1px #0470b9;font-size: 14px; background-color: #0470b9; width: 69px; height: 22px; color: #ffffff;margin-right:5px">
+                        </td>
+                    </tr>
+                    <tr><td colspan="2">
+                        <div id="change-part">
+                            <ul id="change-seat">
+                                <li><a href="#" target="_blank"><img src="img/IMG(1).jpg" alt="标题1" width="512" height="320" /></a></li>
+                                <li><a href="#" target="_blank"><img src="img/IMG(2).jpg" alt="标题2" width="512" height="320" /></a></li>
+                                <li><a href="#" target="_blank"><img src="img/IMG(3).jpg" alt="标题3" width="512" height="320" /></a></li>
+                                <li><a href="#" target="_blank"><img src="img/IMG(4).jpg" alt="标题4" width="512" height="320" /></a></li>
+                                <li><a href="#" target="_blank"><img src="img/IMG(5).jpg" alt="标题5" width="512" height="320" /></a></li>
+                                <li><a href="#" target="_blank"><img src="img/IMG(6).jpg" alt="标题6" width="512" height="320" /></a></li>
+                            </ul>
+                            <div class="point-bg"></div>
+                            <a id="img-alt"></a>
+                            <div id="change-point">
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span>6</span>
+                            </div>
+                        </div>
+                        <script type="text/javascript" src="js/change.js"></script>
+                    </td></tr>
+                </table>
+            </td>
+            <td style="vertical-align:top">
+            	<table cellpadding="0" cellspacing="0">
+                	<tr><td>
+                    	<ul class="title">
+                        	<li id="list-btn-1" class="on" onMouseOver="javascript:show(1,3,1)">园区信息</li>
+                        	<li id="list-btn-2" onMouseOver="javascript:show(1,3,2)">企业动态</li>
+                        	<li id="list-btn-3" onMouseOver="javascript:show(1,3,3)">领导活动</li>
+                        </ul>
+                        <div class="clearFloat"></div>
+                        <div class="content-wrapper">
+                            <ul id="list-btn-1-content" class="content">
+                                <li><span>·</span><a>事情1</a><span>[时间]</span></li>
+                                <li><span>·</span><a>事情1</a><span>[时间]</span></li>
+                                <li><span>·</span><a>事情1</a><span>[时间]</span></li>
+                                <li><span>·</span><a>事情1</a><span>[时间]</span></li>
+                                <li><span>·</span><a>事情1</a><span>[时间]</span></li>
+                                <li><span>·</span><a>事情1</a><span>[时间]</span></li>
+                            </ul>
+                            <ul id="list-btn-2-content" class="content" style="display:none;">
+                                <li><span>·</span><a>事情2</a><span>[时间]</span></li>
+                                <li><span>·</span><a>事情2</a><span>[时间]</span></li>
+                                <li><span>·</span><a>事情2</a><span>[时间]</span></li>
+                                <li><span>·</span><a>事情2</a><span>[时间]</span></li>
+                                <li><span>·</span><a>事情2</a><span>[时间]</span></li>
+                                <li><span>·</span><a>事情2</a><span>[时间]</span></li>
+                            </ul>
+                            <ul id="list-btn-3-content" class="content" style="display:none;">
+                                <li><span>·</span><a>事情3</a><span>[时间]</span></li>
+                                <li><span>·</span><a>事情3</a><span>[时间]</span></li>
+                                <li><span>·</span><a>事情3</a><span>[时间]</span></li>
+                                <li><span>·</span><a>事情3</a><span>[时间]</span></li>
+                                <li><span>·</span><a>事情3</a><span>[时间]</span></li>
+                                <li><span>·</span><a>事情3</a><span>[时间]</span></li>
+                            </ul>
+                        </div>
+                    </td></tr>
+                	<tr><td>
+                    	<ul class="title">
+                        	<li class="on">园区信息</li>
+                        </ul>
+                        <div class="clearFloat"></div>
+                        <div class="content-wrapper">
+                            <img src="img/" width="30%" height="60px" style="margin-left:5px;margin-top:5px" />
+                            <img src="img/" width="30%" height="60px" style="margin-left:5px;margin-top:5px" />
+                            <img src="img/" width="30%" height="60px" style="margin-left:5px;margin-top:5px" />
+                        </div>
+                    </td></tr>
+                </table>
+            </td></tr>
+        </tbody></table>
+        <table cellpadding="0" cellspacing="0"><tbody>
+        	<tr>
+            	<td width="32%">
+                	<ul class="title">
+                        <li id="list-btn-4" class="on" onMouseOver="javascript:show(4,6,4)">通知公告</li>
+                        <li id="list-btn-5" onMouseOver="javascript:show(4,6,5)">建设环保</li>
+                        <li id="list-btn-6" onMouseOver="javascript:show(4,6,6)">财政金融</li>
+                    </ul>
+                    <div class="clearFloat"></div>
+                    <div class="content-wrapper">
+                        <ul id="list-btn-4-content" class="content">
+                            <li><span>·</span><a>事情4</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情4</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情4</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情4</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情4</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情4</a><span>[时间]</span></li>
+                        </ul>
+                        <ul id="list-btn-5-content" class="content" style="display:none;">
+                            <li><span>·</span><a>事情5</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情5</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情5</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情5</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情5</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情5</a><span>[时间]</span></li>
+                        </ul>
+                        <ul id="list-btn-6-content" class="content" style="display:none;">
+                            <li><span>·</span><a>事情6</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情6</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情6</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情6</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情6</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情6</a><span>[时间]</span></li>
+                        </ul>
+                    </div>
+                </td>
+            	<td width="33%">
+                	<ul class="title">
+                        <li id="list-btn-7" class="on" onMouseOver="javascript:show(7,8,7)">工程招投标</li>
+                        <li id="list-btn-8" onMouseOver="javascript:show(7,8,8)">政府采购</li>
+                    </ul>
+                    <div class="clearFloat"></div>
+                    <div class="content-wrapper">
+                        <ul id="list-btn-7-content" class="content">
+                            <li><span>·</span><a>事情7</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情7</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情7</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情7</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情7</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情7</a><span>[时间]</span></li>
+                        </ul>
+                        <ul id="list-btn-8-content" class="content" style="display:none;">
+                            <li><span>·</span><a>事情8</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情8</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情8</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情8</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情8</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情8</a><span>[时间]</span></li>
+                        </ul>
+                    </div>
+                </td>
+            	<td width="32%" style="vertical-align:top">
+                	<div class="title">政府信息公开</div>
+                    <div class="content-wrapper">
+                        <div class="img-btn">
+                        	<a><img src="img/xx_1.jpg" width="96" height="27" onmouseover="this.src='img/xx_1a.jpg'" onmouseout="this.src='img/xx_1.jpg'"></a>
+                            <a><img src="img/xx_2.jpg" width="96" height="27" onmouseover="this.src='img/xx_2a.jpg'" onmouseout="this.src='img/xx_2.jpg'"></a>
+                            <a><img src="img/xx_3.jpg" width="96" height="27" onmouseover="this.src='img/xx_3a.jpg'" onmouseout="this.src='img/xx_3.jpg'"></a>
+                            <a><img src="img/xx_4.jpg" width="96" height="27" onmouseover="this.src='img/xx_4a.jpg'" onmouseout="this.src='img/xx_4.jpg'"></a>
+                            <a><img src="img/xx_5.jpg" width="96" height="27" onmouseover="this.src='img/xx_5a.jpg'" onmouseout="this.src='img/xx_5.jpg'"></a>
+                            <a><img src="img/xx_6.jpg" width="96" height="27" onmouseover="this.src='img/xx_6a.jpg'" onmouseout="this.src='img/xx_6.jpg'"></a>
+                        </div>
+                        <div class="text-btn">
+                        <table><tbody>
+                            <tr>
+                                <td><a href="">领导之窗</a></td>
+                                <td><a href="" target="_blank">机构职能</a></td>
+                                <td><a href="" target="_blank">计划规划</a></td>
+                                <td><a href="" target="_blank">法规公文</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="" target="_blank">统计数据</a></td>
+                                <td><a href="" target="_blank">人事信息</a></td>
+                                <td><a href="" target="_blank">财政信息</a></td>
+                                <td><a href="" target="_blank">应急管理</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="" target="_blank">收费项目</a></td>
+                                <td><a href="" target="_blank">政府采购</a></td>
+                                <td><a href="" target="_blank">重点项目</a></td>
+                                <td><a href="">城乡管理</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">监督检查</a></td>
+                                <td><a href="">捐赠救助</a></td>
+                            </tr>
+                        </tbody></table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+        <table cellpadding="0" cellspacing="0"><tbody>
+        	<tr>
+            	<td width="34%">
+                	<ul class="title">
+                        <li id="list-btn-9" class="on" onMouseOver="javascript:show(9,11,9)">国务院要闻</li>
+                        <li id="list-btn-10" onMouseOver="javascript:show(9,11,10)">省政府要闻</li>
+                        <li id="list-btn-11" onMouseOver="javascript:show(9,11,11)">政府文件</li>
+                    </ul>
+                    <div class="clearFloat"></div>
+                    <div class="content-wrapper">
+                        <ul id="list-btn-9-content" class="content">
+                            <li><span>·</span><a>事情9</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情9</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情9</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情9</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情9</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情9</a><span>[时间]</span></li>
+                        </ul>
+                        <ul id="list-btn-10-content" class="content" style="display:none;">
+                            <li><span>·</span><a>事情10</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情10</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情10</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情10</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情10</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情10</a><span>[时间]</span></li>
+                        </ul>
+                        <ul id="list-btn-11-content" class="content" style="display:none;">
+                            <li><span>·</span><a>事情11</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情11</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情11</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情11</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情11</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情11</a><span>[时间]</span></li>
+                        </ul>
+                    </div>
+                </td>
+            	<td width="33%">
+                	<ul class="title">
+                        <li id="list-btn-12" class="on" onMouseOver="javascript:show(12,13,12)">媒体报道</li>
+                        <li id="list-btn-13" onMouseOver="javascript:show(12,13,13)">他山之石</li>
+                    </ul>
+                    <div class="clearFloat"></div>
+                    <div class="content-wrapper">
+                        <ul id="list-btn-12-content" class="content">
+                            <li><span>·</span><a>事情12</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情12</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情12</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情12</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情12</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情12</a><span>[时间]</span></li>
+                        </ul>
+                        <ul id="list-btn-13-content" class="content" style="display:none;">
+                            <li><span>·</span><a>事情13</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情13</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情13</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情13</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情13</a><span>[时间]</span></li>
+                            <li><span>·</span><a>事情13</a><span>[时间]</span></li>
+                        </ul>
+                    </div>
+                </td>
+            	<td width="32%">
+                    <ul class="title">
+                        <li class="on">政民互动</li>
+                    </ul>
+                    <div class="content-wrapper">
+                        <div class="img-btn">
+                        	<a><img src="img/zm_1.jpg" width="71" height="78" onmouseover="this.src='img/zm_1a.jpg'" onmouseout="this.src='img/zm_1.jpg'"></a>
+                        	<a><img src="img/zm_2.jpg" width="71" height="78" onmouseover="this.src='img/zm_2a.jpg'" onmouseout="this.src='img/zm_2.jpg'"></a>
+                        	<a><img src="img/zm_3.jpg" width="71" height="78" onmouseover="this.src='img/zm_3a.jpg'" onmouseout="this.src='img/zm_3.jpg'"></a>
+                        	<a><img src="img/zm_4.jpg" width="71" height="78" onmouseover="this.src='img/zm_4a.jpg'" onmouseout="this.src='img/zm_4.jpg'"></a>
+                        	<a><img src="img/zm_5.jpg" width="71" height="78" onmouseover="this.src='img/zm_5a.jpg'" onmouseout="this.src='img/zm_5.jpg'"></a>
+                        	<a><img src="img/zm_6.jpg" width="71" height="78" onmouseover="this.src='img/zm_6a.jpg'" onmouseout="this.src='img/zm_6.jpg'"></a>
+                        	<a><img src="img/zm_7.jpg" width="71" height="78" onmouseover="this.src='img/zm_7a.jpg'" onmouseout="this.src='img/zm_7.jpg'"></a>
+                        	<a><img src="img/zm_8.jpg" width="71" height="78" onmouseover="this.src='img/zm_8a.jpg'" onmouseout="this.src='img/zm_8.jpg'"></a>
+                        </div>
+                	</div>
+                </td>
+            </tr>
+        </tbody></table>
+        <table cellpadding="0" cellspacing="0"><tbody>
+        	<tr><td id="web-group">
+                <ul class="group-title">
+                    <li id="web-btn-1" class="on" onMouseOver="javascript:change(1)">网站组别1</li>
+                    <li id="web-btn-2" onMouseOver="javascript:change(2)">网站组别2</li>
+                    <li id="web-btn-3" onMouseOver="javascript:change(3)">网站组别3</li>
+                    <li id="web-btn-4" onMouseOver="javascript:change(4)">网站组别4</li>
+                    <li id="web-btn-5" onMouseOver="javascript:change(5)">网站组别5</li>
+                    <li id="web-btn-6" onMouseOver="javascript:change(6)">网站组别6</li>
+                </ul>
+                <div class="clearFloat"></div>
+                <div class="group-content-wrapper">
+                    <ul id="web-btn-1-content" class="group-content">
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <li><a>网站1</a></li>
+                        <div class="clearFloat"></div>
+                    </ul>
+                    <ul id="web-btn-2-content" class="group-content" style="display:none;">
+                        <li><a>网站2</a></li>
+                        <li><a>网站2</a></li>
+                        <li><a>网站2</a></li>
+                        <li><a>网站2</a></li>
+                        <li><a>网站2</a></li>
+                        <li><a>网站2</a></li>
+                        <li><a>网站2</a></li>
+                        <li><a>网站2</a></li>
+                        <li><a>网站2</a></li>
+                        <div class="clearFloat"></div>
+                    </ul>
+                    <ul id="web-btn-3-content" class="group-content" style="display:none;">
+                        <li><a>网站3</a></li>
+                        <li><a>网站3</a></li>
+                        <li><a>网站3</a></li>
+                        <li><a>网站3</a></li>
+                        <li><a>网站3</a></li>
+                        <div class="clearFloat"></div>
+                    </ul>
+                    <ul id="web-btn-4-content" class="group-content" style="display:none;">
+                        <li><a>网站4</a></li>
+                        <li><a>网站4</a></li>
+                        <li><a>网站4</a></li>
+                        <li><a>网站4</a></li>
+                        <li><a>网站4</a></li>
+                        <li><a>网站4</a></li>
+                        <li><a>网站4</a></li>
+                        <li><a>网站4</a></li>
+                        <div class="clearFloat"></div>
+                    </ul>
+                    <ul id="web-btn-5-content" class="group-content" style="display:none;">
+                        <li><a>网站5</a></li>
+                        <li><a>网站5</a></li>
+                        <li><a>网站5</a></li>
+                        <li><a>网站5</a></li>
+                        <li><a>网站5</a></li>
+                        <li><a>网站5</a></li>
+                        <div class="clearFloat"></div>
+                    </ul>
+                    <ul id="web-btn-6-content" class="group-content" style="display:none;">
+                        <li><a>网站6</a></li>
+                        <li><a>网站6</a></li>
+                        <li><a>网站6</a></li>
+                        <li><a>网站6</a></li>
+                        <li><a>网站6</a></li>
+                        <div class="clearFloat"></div>
+                    </ul>
+                </div>
+            </td></tr>
+        </tbody></table>
+    </div>
+	<div id="tail">
+    	<div>               
+            <a href="" target="_blank">首页</a> | 
+            <a href="" target="_blank">关于本站</a> | 
+            <a href="" target="_blank">网站导航</a> | 
+            <a href="" target="_blank">版权声明</a> | 
+            <a href="" target="_blank"> 隐私声明</a> | 
+            <a href="" target="_blank">网站声明</a> | 
+            <a href="" target="_blank"> 常见问题</a> | 
+            <a href="" target="_blank">栏目介绍</a> |
+            <a href="" target="_blank">操作须知</a> | 
+            <a href="" target="_blank">网站管理</a> | 
+            <a href="" target="_blank">联系我们</a>
+        </div>
+        <div>版权所有：宁波保税区（出口加工区）管理委员会</div>
+        <div>最佳使用效果1024*768分辨率,建议使用IE6.0版本或以上 浙ICP备05000044号</div>
+        <div>Copyright 2016 Administrative Committee Of Ningbo Free Trade Zone All Rights Reserved</div>
+        </div>
+    </div>
+	<script type="text/javascript" src="js/scroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+
+#include <afxdb.h>
+#include <afxtempl.h>
+#include <odbcinst.h>
+
+	CDatabase db;
+	CRecordset Dbset(&db);
+	if(db.Open(_T("Gary")) == 0)
+	{
+		SQLConfigDataSource(NULL,ODBC_ADD_DSN,_T("Microsoft Access Driver (*.mdb)"),_T("DSN=Gary\0DBQ=C://Data.mdb/0"));
+		//db.Open(_T("Data"));
+		//Dbset.m_pDatabase->ExecuteSQL(_T("CREATE TABLE Information"));
+		//Dbset.m_pDatabase->ExecuteSQL(_T("CREATE TABLE User"));
+	}
+	db.Close();

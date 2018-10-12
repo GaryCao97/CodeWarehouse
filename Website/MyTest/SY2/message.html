@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<title>留言板</title>
+        <style>
+			#form-username{
+				width:120px;
+			}
+			#form-title{
+				width:360px;
+			}
+			#form-time{
+				width:200px;
+			}
+			#form-body{
+			}
+			#title{
+				text-align:center;
+				font-size:36px;
+				font-weight:bolder;
+				width:900px;
+				margin:0 auto;
+				padding:20px;
+				border-bottom:1px solid #000;
+			}
+			#message{
+				width:800px;
+				margin:0 auto;
+			}
+			.message-title{
+				width:750px;
+				margin:0 auto;
+				padding:10px;
+				border-bottom:1px solid #000;
+				font-size:20px;
+				font-weight:bolder;
+			}
+			.message-body{
+				width:720px;
+				margin:0 auto;
+				padding:5px;
+				font-size:16px;
+			}
+			.message-tail{
+				width:750px;
+				margin:0 auto;
+				text-align:right;
+				position:relative;
+			}
+			.message-username{
+				font-size:12px;
+			}
+			.message-time{
+				padding-left:20px;
+				font-size:12px;
+			}
+			#username-sure{
+				display:inline-block;
+				width:15px;
+				height:15px;
+			}
+			#title-sure{
+				display:inline-block;
+				width:15px;
+				height:15px;
+			}
+			.error{
+				background:url(error.jpg) no-repeat;
+				background-size:cover;
+			}
+			.correct{
+				background:url(correct.jpg) no-repeat;
+				background-size:cover;
+			}
+        </style>
+	</head>
+	<body>
+		<form method="post" action="">
+            <div align="center">
+                <table cellpadding="2" cellspacing="0"><tbody>
+                	<tr><td>用户：</td><td><input type="text" name="name" id="form-username" value=""><span id="username-sure" class="error"></span><span style="color:#F00;font-size:12px">*用户名为2-10个字</span></td></tr>
+                    <tr><td>标题：</td><td><input type="text" name="title" id="form-title" value=""><span id="title-sure" class="error"></span><span style="color:#F00;font-size:12px">*标题最多有20个字</span></td></tr>
+                    <tr><td>时间：</td><td><input type="text" name="time" id="form-time" value=""></td></tr>
+                    <tr><td>内容：</td><td><textarea cols="60" rows="5" name="message" id="form-body"></textarea></td></tr>
+                </tbody></table>
+                <input type="button" value="确认" name="ok" id="ok" /><input type="reset" value="重置" onClick="javascript:document.getElementById('username-sure').className = 'error';document.getElementById('title-sure').className = 'error';" />
+            </div>
+        </form>
+        <br/>
+        <div id="title">留言板</div>
+		<table cellpadding="0" cellspacing="0" id="message"><tbody>
+        </tbody></table>
+		<script type="text/javascript">
+			/*时间设定*/
+			function SetTime(){
+				var oTime = document.getElementById('form-time');
+				var today = new Date();
+				var tTime = today.getFullYear() + '年' + (today.getMonth()+1) + '月' + today.getDate() + '日 ' + ((today.getHours()<10)?('0' + today.getHours()):today.getHours()) + ':' + ((today.getMinutes()<10)?('0' + today.getMinutes()):today.getMinutes());
+				oTime.value = tTime;
+			}
+			setInterval(SetTime,100);
+			/*将确定后的留言内容添加到下面的留言板*/
+			function CreateLine(){
+				var oMess = document.getElementById('message').getElementsByTagName('tbody')[0];
+				
+				var MessTitle = document.createElement('div');
+				MessTitle.className = 'message-title'
+				MessTitle.innerHTML = document.getElementById('form-title').value;
+				
+				var MessBody = document.createElement('pre');
+				MessBody.className = 'message-body'
+				MessBody.innerHTML = document.getElementById('form-body').value;
+				
+				var MessUser = document.createElement('span');
+				MessUser.className = 'message-username'
+				MessUser.innerHTML = '用户：' + document.getElementById('form-username').value;
+				
+				var MessTime = document.createElement('span');
+				MessTime.className = 'message-time'
+				MessTime.innerHTML = '时间：' + document.getElementById('form-time').value;
+				
+				var MessTail = document.createElement('div');
+				MessTail.className = 'message-tail'
+				MessTail.appendChild(MessUser);
+				MessTail.appendChild(MessTime);
+				
+				var Td = document.createElement('td')
+				Td.appendChild(MessTitle);
+				Td.appendChild(MessBody);
+				Td.appendChild(MessTail);
+				
+				var Tr = document.createElement('tr')
+				Tr.appendChild(Td);
+				
+				oMess.appendChild(Tr);
+			}
+			/*确定内容合法*/
+			var btnOK = document.getElementById('ok');
+			
+			function checkString(oString){
+				var Ban = [];
+				Ban[0] = ' fuck ';
+				Ban[1] = ' shit ';
+				Ban[2] = ' bitch ';
+				var aString = new String();
+				var bString = new String();
+				for(var m = 0;m<Ban.length;m++){
+					var index = oString.indexOf(Ban[m],0);
+					var len = Ban[m].length;
+					if(index != -1){
+						aString = oString.substring(0,index);
+						bString = oString.substring(index+len);
+						oString = aString + ' **** ' + bString;
+					}
+				}
+				return oString;
+			}
+			
+			btnOK.onclick = function(){
+				var BodyInner = document.getElementById('form-body').value;
+				var UserInner = document.getElementById('form-username').value;
+				var TitleInner = document.getElementById('form-title').value;
+				var book = -1;
+				if(BodyInner != checkString(BodyInner) || UserInner != checkString(UserInner) || TitleInner != checkString(TitleInner)){
+					book = 0;
+				}
+				if(document.getElementById('username-sure').className == 'error' || document.getElementById('title-sure').className == 'error'){
+					book = 1;
+				}
+				if(book == 0){
+					var alert_message = "输入的内容中含有违法字符，已被和谐！";
+					alert(alert_message);
+					document.getElementById('form-body').value = checkString(BodyInner);
+					document.getElementById('form-username').value = checkString(UserInner);
+					document.getElementById('form-title').value = checkString(TitleInner);
+				}else if(book == 1){
+					alert('内容请输入完整！');
+				}else if(book == -1){
+					var tWarn = confirm("确定无误后，点击确定");
+					if(tWarn == true){
+						CreateLine();
+						document.getElementById('username-sure').className = 'error';
+						document.getElementById('title-sure').className = 'error';
+						document.getElementById('form-username').value = '';
+						document.getElementById('form-title').value = '';
+						document.getElementById('form-body').value = '';
+					}
+				}
+			}
+			/*确定规定字数*/
+			var oUser = document.getElementById('form-username');
+			oUser.onchange = function(){
+				var inner_1 = this.value;
+				var span_1 = document.getElementById('username-sure');
+				if(inner_1.length >= 2 && inner_1.length <= 10){
+					span_1.className = 'correct';
+				}else{
+					span_1.className = 'error';
+				}
+			}
+			var oTitle = document.getElementById('form-title');
+			oTitle.onchange = function(){
+				var inner_2 = this.value;
+				var span_2 = document.getElementById('title-sure');
+				if(inner_2.length >= 2 && inner_2.length <= 20){
+					span_2.className = 'correct';
+				}else{
+					span_2.className = 'error';
+				}
+			}
+        </script>
+</body>
+</html>

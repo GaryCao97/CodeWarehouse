@@ -1,0 +1,190 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	font-family:verdana, "微软雅黑"；
+}
+body{
+	background-color:#fff;
+}
+#Leader{
+	height:82px;
+	background: #06F;
+}
+#LeaderList{
+	width:1000px;
+	margin:0 auto;
+	list-style:none;
+}
+#Title{
+	width:380px;
+	font-size:30px;
+	font-weight:bolder;
+	height:80px;
+	text-align:center;
+	line-height:80px;
+	color:#FFF;
+}
+#LeaderList li{
+	float:left;
+}
+#LeaderList li a{
+	display:block;
+	height:80px;
+	text-align:center;
+	line-height:80px;
+	width:100px;
+	margin:1px;
+	color:#fff;
+}
+#LeaderList li a:hover,#LeaderList li a.on{
+	background:#FFF;
+	color:#333;
+}
+#Top{
+	height:400px;
+	width:1200px;
+	margin:0 auto;
+	background:url(../img/IMG3.png) no-repeat center;
+}
+#MainBody{
+	width:1000px;
+	min-height:600px;
+	margin:0 auto 5px;
+}
+#MainBody td{
+	vertical-align:top;
+}
+#LeftPart{
+	width:250px;
+	margin-right:5px;
+	padding-top:10px;
+}
+.LPThing{
+	width:95%;
+	margin:0 auto 10px;
+	color:#aaa;
+}
+.LPTTitle{
+	padding-left:16px;
+	height:50px;
+	line-height:50px;
+	font-size:16px;
+	font-weight:bolder;
+	background:#03F;
+	color:#fff;
+}
+.LPTBody{
+	background:#eee;
+}
+#Classify{
+	list-style:none;
+	width:90%;
+	margin:0 auto;
+	padding:3px 0;
+}
+#Classify li a{
+	display:block;
+	height:25px;
+	line-height:25px;
+	padding:5px;
+	margin:3px 0;
+	color:#aaa;
+}
+#Classify li a:hover{
+	color:#fff;
+	background:#03F;
+}
+#Kefu{
+	list-style:none;
+	width:90%;
+	margin:0 auto;
+	padding:5px 0;
+	border-bottom:#888 dashed 1px;
+}
+#Kefu li a{
+	display:block;
+	height:20px;
+	line-height:20px;
+	font-size:14px;
+	margin:5px 0;
+	color:#aaa;
+}
+#KefuTime{
+	width:90%;
+	margin:0 auto;
+	padding:3px 0;
+}
+#WorkTimeImg{
+	width:27px;
+	height:27px;
+	display:inline-block;
+	background:url(../img/WorkTime.gif) no-repeat;
+}
+#WorkTime{
+	font-size:15px;
+	font-weight:bolder;
+}
+#KefuTime p{
+	font-size:12px;
+	padding-bottom:8px;
+	font-weight: normal;
+}
+#ContactStyle{
+	min-height:120px;
+	padding:10px;
+}
+#ContactStyle p{
+	margin:3px 0;
+	font-size:14px;
+}
+#RightPart{
+	width:750px;
+	padding-top:10px;
+}
+.RPThing{
+	width:97%;
+	margin:0 auto 5px;
+}
+.RPTTitle{
+	padding:0 20px 0 6px;
+	height:30px;
+	border-bottom:#ccc solid 1px;
+}
+.RPTTName{
+	font-weight:bolder;
+	color:#03F;
+	height:30px;
+	line-height:30px;
+}
+.RPTTMore{
+	float:right;
+	height:30px;
+	line-height:30px;
+	display:inline-block;
+	color:#CCC;
+}
+.RPTBody{
+	padding:5px 8px;
+}
+.ClearFloat{
+	clear:both;
+	height:0;
+	font-size:0;
+	overflow:hidden;
+	line-height:0;
+}
+#Tail{
+	padding:5px;
+	text-align:center;
+	background:#eee;
+}
+#Tail div{
+	margin-top:5px;
+	color: #ccc;
+}
+#Tail a{
+	margin:5px;
+	color: #ccc;
+}

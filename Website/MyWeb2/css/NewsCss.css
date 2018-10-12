@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+#News{
+	list-style:none;
+	width:99%;
+	margin:0 auto;
+	font-size:14px;
+}
+#News li a{
+	display:block;
+	height:24px;
+	line-height:24px;
+	padding:5px;
+	margin:3px 0;
+	color:#aaa;
+}
+#News li a:hover{
+	color:#fff;
+	background:#03F;
+}
+#News li a p{
+	float:left;
+}
+#News li a span{
+	display:block;
+	float:right;
+	text-align:right;
+}
+#Pages{
+	list-style:none;
+	width:99%;
+	margin:0 auto;
+	font-size:14px;
+	color:#aaa;
+}
+#Pages li{
+	float: left;
+	margin: 10px;
+}
+#NewTitle{
+	float:none;
+	width:auto;
+	padding:20px 0 10px;
+	text-align:center;
+	font-size:18px;
+	margin:5px 0 5px 0;
+	color:#aaa;
+}
+#Line{
+	border-width:1px;
+	border-style:dashed;
+	border-color:#dbeaef;
+}
+#NewBody{
+	min-height:300px;
+	padding-top:5px;
+	width:99%;
+	font-size:13px;
+	color:#aaa;
+}
+
+#ShareInfo *{
+	float:left;
+}
+#ShareTo{
+	padding-left:15px;
+	cursor:default;
+	font-size: 12px;
+	color:#aaa;
+}
+#ShareCtrl{
+	width:90%;
+	height:auto;
+}
+#ShareInfo a{
+	text-decoration:none;
+	display:block;
+	width:90px;
+	float:left;
+	margin:0 0 5px 0;
+	font-size:13px;
+	color:#aaa;
+}
+#ShareInfo a *{
+	float:left;
+	height:20px;
+	line-height:20px;
+}
+#ShareInfo .ShareIcon{
+	width:20px;
+	margin:0 1px 0 1px;
+	cursor:pointer;
+}
+#Turn{
+	width:100%;
+}
+#Turn table{
+	width:auto;
+	margin:0 auto;
+}
+#Turn a{
+	font-size:14px;
+	color:#aaa;
+	display:block;
+	width:60px;
+	height:25px;
+	line-height:25px;
+	border:#fff solid 1px;
+}
+#Turn a.on{
+	border:#333 solid 1px;
+}

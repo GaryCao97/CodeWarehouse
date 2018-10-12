@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<title>第二点</title>
+        <style type="text/css">
+			#bg{
+				width:98%;
+				padding:10px;
+				margin:0 auto;
+				border:solid #CCC 2px;
+			}
+			#inside{
+				width:99%;
+				margin:0 auto;
+			}
+			#title{
+				text-align:center;
+				padding:10px 0;
+				color:#F00 !important;
+				font-size:32px;
+			}
+			#sub-title{
+				text-align:center;
+				font-size:14px;
+			}
+			#sub-title>span{
+				display:inline-block;
+				padding:0 10px;
+			}
+			#font-size-control a{
+				display:inline-block;
+				padding:0 10px;
+				cursor:pointer;
+				text-decoration:underline;
+			}
+			#bgcolor-control a{
+				display:inline-block;
+				width:10px;
+				height:10px;
+				margin:0 5px;
+				border:1px solid #000;
+				cursor:pointer;
+			}
+			.white{
+				background:#FFF;
+			}
+			.gray{
+				background:#CCC;
+			}
+			.green{
+				background:#6F3;
+			}
+			.yellow{
+				background:#FF6;
+			}
+			.blue{
+				background:#0CF;
+			}
+			#main-body{
+				text-indent:2em;
+				font-size:16px;
+			}
+		</style>
+	</head>
+	<body>
+        <table id="bg" cellpadding="0" cellspacing="0"><tbody><tr><td>
+            <table id="inside" cellpadding="0" cellspacing="0"><tbody>
+                <tr><td id="title">标题</td></tr>
+                <tr><td><hr id="line" /></td></tr>
+                <tr><td id="sub-title">
+                	<span id="time"></span>
+                	<span>来源：。。。。</span>
+                	<span>浏览次数：。。。</span>
+                	<span id="font-size-control">字号：{<a id="big">大</a><a id="middle">中</a><a id="small">小</a>}</span>
+                	<span id="bgcolor-control">视力保护色：<a class="white"><a class="gray"></a></a><a class="green"></a><a class="yellow"></a><a class="blue"></a></span>
+                </td></tr>
+                <tr><td id="main-body">
+                	<p>正文1</p>
+                	<p>正文2</p>
+                	<p>正文3</p>
+                	<p>正文4</p>
+                	<p align="right">单位</p>
+                	<p align="right">日期</p>
+                </td></tr>
+            </tbody></table>
+        </td></tr></tbody></table>
+        <script type="text/javascript">
+			var oTime = document.getElementById('time');
+			var today = new Date();
+			var tTime = '时间：' + today.getFullYear() + '-' + (today.getMonth()+1) + '-' + today.getDate();
+			oTime.innerHTML = tTime;
+			
+			var btn_big = document.getElementById('big'),
+				btn_middle = document.getElementById('middle'),
+				btn_small = document.getElementById('small');
+			var mainBody = document.getElementById('main-body');
+			btn_big.onclick = function(){
+				mainBody.style.fontSize = 20 + 'px';
+			}
+			btn_middle.onclick = function(){
+				mainBody.style.fontSize = 16 + 'px';
+			}
+			btn_small.onclick = function(){
+				mainBody.style.fontSize = 12 + 'px';
+			}
+			
+			var btn = document.getElementById('bgcolor-control').getElementsByTagName('a');
+			var white = document.getElementById('white');
+			var BG = document.getElementById('bg');
+			for(i = 0;i < btn.length;i++){
+				btn[i].onclick = function(){
+					BG.className = this.className;
+				}
+			}
+		</script>
+    </body>
+</html>

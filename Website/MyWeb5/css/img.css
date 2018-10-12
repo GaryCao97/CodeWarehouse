@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+.photo-1{
+	background: url(../img/img-1.jpg);
+	background-size:cover;
+}
+.photo-2{
+	background: url(../img/img-2.jpg);
+	background-size:cover;
+}
+.photo-3{
+	background: url(../img/img-3.jpg);
+	background-size:cover;
+}
+.photo-4{
+	background: url(../img/img-4.jpg);
+	background-size:cover;
+}
+.photo-5{
+	background: url(../img/img-5.jpg);
+	background-size:cover;
+}
+.photo-6{
+	background: url(../img/img-6.jpg);
+	background-size:cover;
+}
+.photo-7{
+	background: url(../img/img-7.jpg);
+	background-size:cover;
+}
+.photo-8{
+	background: url(../img/img-8.jpg);
+	background-size:cover;
+}
+.photo-9{
+	background: url(../img/img-9.jpg);
+	background-size:cover;
+}

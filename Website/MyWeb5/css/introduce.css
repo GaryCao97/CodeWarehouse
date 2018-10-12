@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+#introduce{
+	width: 1200px;
+	margin:0 auto;
+	background: rgba(0,255,153,.7);
+}
+#introduce-title-word{
+	padding-top:20px;
+	text-align:center;
+	font: 40px "微软雅黑" , "宋体";
+}
+.phase{
+	padding:10px;
+	width:980px;
+	margin:0 auto;
+}
+.phase-image{
+	width:400px;
+}
+.phase-word{
+	width:580px;
+	text-align:left;
+	font-size:18px;
+	font-family:verdana, "微软雅黑";
+	line-height:1.2em;
+}
+.phase>table{
+	width:1000px;
+	margin: 0 auto;
+}
+.phase img{
+	padding:5px;
+	width:400px;
+	height: auto;
+}

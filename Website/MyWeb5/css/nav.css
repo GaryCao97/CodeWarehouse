@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+#nav{
+	background:rgba(0,200,200,.7);
+	width:100%;
+	display:none;
+	position:fixed;
+	top:0;
+	text-align:center;
+	z-index:2000;
+}
+#nav ul{
+	list-style:none;
+}
+#nav ul li a{
+	text-decoration:none;
+	font: 30px "微软雅黑" , "宋体";
+	color:#ccc;
+}
+#nav ul li a:hover{
+	color:#f15;
+}

@@ -1,0 +1,29 @@
+
+
+	LV_ITEM m_item;//条目结构体对象
+        CString string;//字符串临时变量
+        CDBVariant DbVariant;
+        i=0;
+        if(m_pSet->IsEOF())//记录集是否为空
+        {
+                AfxMessageBox("记录集没有记录");
+                return;
+        }
+        m_pSet->MoveFirst();//从第一个记录开始
+        while(m_pSet->IsEOF()==0)//是否到达最后一个记录
+        {
+		m_item.mask=LVIF_TEXT;
+                m_item.iItem=i;
+                m_item.iSubItem=0;
+                m_pSet->GetFieldValue((short)0,string);
+                m_item.pszText=string.GetBuffer(string.GetLength());
+                m_List->InsertItem(&m_item);//插入条目
+                //显示列数据
+                for(j=1;j<m_pSet->m_nFields;j++)
+                {
+                        m_pSet->GetFieldValue((short)j,string);
+                        m_List->SetItemText(i,j,string.GetBuffer(string.GetLength()));
+                }
+                m_pSet->MoveNext();//下移记录
+                i++;
+        }

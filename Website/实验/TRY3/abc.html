@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+body{
+	padding:0;
+	margin:0;
+	height:300%
+}
+.lines{
+	position:fixed;
+	top:0;
+	left:0;
+	width:2px;
+	height:2px;
+	background:#F00;
+}
+</style>
+</head>
+
+<body>
+	<input id="btn" type="button" value="开启" />
+    <script type="text/javascript">
+		var btn = document.getElementById('btn');
+		var index = false;
+		btn.onclick = function(e){
+			if(index == false){
+				index = true;
+				btn.value = '关闭';
+				var line = [document.createElement('div'),document.createElement('div')];
+				line[0].className = 'lines';
+				line[1].className = 'lines';
+				line[0].style.width = document.body.clientWidth;
+				line[1].style.height = document.body.clientHeight;
+				document.body.appendChild(line[0]);
+				document.body.appendChild(line[1]);
+				document.onmousemove = function(e){
+					var e = e || window.event;
+					line[0].style.top = e.clientY + 8 + 'px';
+					line[1].style.left = e.clientX + 5 + 'px';
+				}
+			}
+			else{
+				index = false;
+				btn.value = '开启';
+				var line = document.getElementsByClassName('lines');
+				document.body.removeChild(line[0]);
+				document.body.removeChild(line[0]);
+				document.onmousemove = null;
+			}
+		}
+	</script>
+</body>
+</html>

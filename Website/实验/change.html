@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Test</title>
+<style type="text/css">
+#big-part{
+	width:240px;
+	height:240px;
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+}
+#big-part img{
+	display:none;
+	position:absolute;
+	width:240px;
+	height:240px;
+	background:url(IMG4.jpg);
+	background-size:contain;
+}
+#big-part img.photo-on{
+	display: inline-block;
+}
+#change-point{
+	width:240px;
+	margin:0 auto;
+}
+#change-point div{
+	display:inline-block;
+	margin:0 5px;
+	width:5px;
+	height:8px;
+	border:#00C 1px solid;
+	background-color:#111;
+	opacity:0.9;
+	cursor:pointer;
+}
+#change-point div.on{
+	background-color:#CCC;
+	cursor: auto;
+}
+</style>
+</head>
+
+<body>
+<div id="big-part">
+	<img src="IMG4.jpg" class="photo-on" />
+	<img src="IMG4.jpg" />
+	<img src="IMG4.jpg" />
+	<img src="IMG4.jpg" />
+	<img src="IMG4.jpg" />
+	<img src="IMG4.jpg" />
+</div>
+<div id="change-point"></div>
+<script type="text/javascript">
+	var pic = ['IMG4.jpg','IMG4.jpg','IMG4.jpg','IMG4.jpg','IMG4.jpg','IMG4.jpg'];
+	var total = pic.length;
+</script>
+</body>
+</html>

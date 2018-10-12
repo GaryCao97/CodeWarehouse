@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Test</title>
+<style type="text/css">
+#big-part{
+	width:1000px;
+	height:200px;
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+}
+.moving-parts{
+	position:absolute;
+	width:120px;
+	height:120px;
+	z-index:1000;
+	background:url(img/IMG4.jpg);
+	background-size:contain;
+}
+</style>
+<script type="text/javascript" src="Moving.js"></script>
+</head>
+
+<body>
+<div id="big-part">
+	<div class="moving-parts">1</div>
+	<div class="moving-parts">2</div>
+	<div class="moving-parts">3</div>
+	<div class="moving-parts">4</div>
+	<div class="moving-parts">5</div>
+	<div class="moving-parts">6</div>
+	<div class="moving-parts">7</div>
+	<div class="moving-parts">8</div>
+	<div class="moving-parts">9</div>
+	<div class="moving-parts">0</div>
+</div>
+</body>
+</html>

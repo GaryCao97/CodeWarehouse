@@ -1,0 +1,83 @@
+.ShareInfo .Copy{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -437px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -437px 0 no-repeat
+}
+.ShareInfo .SinaWeibo{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -56px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -56px 0 no-repeat
+}
+.ShareInfo .QQWeibo{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -332px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -332px 0 no-repeat
+}
+.ShareInfo .QQZone{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -387px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -387px 0 no-repeat
+}
+.ShareInfo .KaiXin001{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -140px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -140px 0 no-repeat
+}
+.ShareInfo .RenRen{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -84px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -84px 0 no-repeat
+}
+.ShareInfo .DouBan{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -253px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -253px 0 no-repeat
+}
+.ShareInfo .BaiduHi{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -360px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -360px 0 no-repeat
+}
+.ShareInfo .BaiduTieba{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -412px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -412px 0 no-repeat
+}
+.ShareInfo .TaoJiangHu{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -112px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -112px 0 no-repeat
+}
+.ShareInfo .SohuWeibo{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -279px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -279px 0 no-repeat
+}
+.ShareInfo .NeteaseWeibo{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -305px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -305px 0 no-repeat
+}
+.ShareInfo .FaceBook{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -168px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -168px 0 no-repeat
+}
+.ShareInfo .Twitter{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -196px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -196px 0 no-repeat
+}
+.ShareInfo .LinkedIn{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -224px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -224px 0 no-repeat
+}
+.ShareInfo .Weixin{
+	background:url(/image/site/n_shareIcn.png?v=201601191458) -29px 0 no-repeat;
+	_background:url(/image/site/n_shareIcn.gif?v=201503091711) -29px 0 no-repeat
+}
+
+.ShareInfo .ShareIcon{
+	float:left;
+	height:20px;
+	line-height:20px;
+	width:20px;
+	margin:0 2px 0 2px;
+	_margin:0 1px 0 1px;
+	cursor:pointer
+}
+
+.ShareInfo .sharePanel{width:90%;height:auto}
+
+.g_imgPrev{
+	background:url(/image/bg01.png?v=201606201753) -1584px -204px
+}
+.g_imgNext{
+	background:url(/image/bg01.png?v=201606201753) -1548px -204px
+}

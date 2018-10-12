@@ -1,0 +1,179 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+#change-part{
+	width:512px;
+	height:320px;
+	position:relative;
+	overflow:hidden;
+}
+#change-seat{
+	width: 0;
+    height: 0;
+    overflow: hidden;
+	list-style:none;
+}
+#change-seat li{
+	position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.point-bg{
+	position: absolute;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #000;
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    -khtml-opacity: 0.4;
+    opacity: 0.4;
+    left: 0;
+    bottom: 0;
+    _bottom: -1px;
+    z-index: 1;
+}
+#change-point{
+	position:absolute;
+	height: 40px;
+    line-height: 40px;
+    right: 20px;
+    bottom: 0;
+    z-index: 2;
+}
+#change-point span{
+	display: block;
+	width: 12px;
+    height: 12px;
+    line-height: 12px;
+    float: left;
+    margin-left: 5px;
+    position: relative;
+    top: 14px;
+    cursor: pointer;
+	background-image:url(img/ico.png);
+    background-position: -24px -126px;
+    text-indent: -9999px;
+}
+#change-point span.hover{
+	background-position: -10px -126px;
+}
+</style>
+<script type="text/javascript" src="js/moveAnimate.js"></script>
+</head>
+
+<body>
+<div id="change-part">
+	<ul id="change-seat">
+    	<li><a href="#" target="_blank"><img src="img/IMG(1).jpg" alt="标题1" width="512" height="320" /></a></li>
+    	<li><a href="#" target="_blank"><img src="img/IMG(2).jpg" alt="标题2" width="512" height="320" /></a></li>
+    	<li><a href="#" target="_blank"><img src="img/IMG(3).jpg" alt="标题3" width="512" height="320" /></a></li>
+    	<li><a href="#" target="_blank"><img src="img/IMG(4).jpg" alt="标题4" width="512" height="320" /></a></li>
+    	<li><a href="#" target="_blank"><img src="img/IMG(5).jpg" alt="标题5" width="512" height="320" /></a></li>
+    	<li><a href="#" target="_blank"><img src="img/IMG(6).jpg" alt="标题6" width="512" height="320" /></a></li>
+    </ul>
+    <div class="point-bg"></div>
+    <a></a>
+    <div id="change-point">
+    	<span>1</span>
+    	<span>2</span>
+    	<span>3</span>
+    	<span>4</span>
+    	<span>5</span>
+    	<span>6</span>
+    </div>
+</div>
+<script>
+var oLi = document.getElementById('change-seat').getElementsByTagName('li');
+var pBtn = document.getElementById('change-point').getElementsByTagName('span');
+var now = 0;
+var next = 1;
+var timer = null;
+for(i = 0; i < oLi.length;i++){
+	oLi[i].style.display = 'none';
+	if(i == 0){
+		oLi[i].style.display = 'list-item';
+		pBtn[i].classList.add('hover');
+	}
+	pBtn[i].onmouseover = function(){
+		clearInterval(timer);
+		for(n = 0; n < pBtn.length; n++){
+			if(parseInt(this.innerHTML) - 1 != n){
+				pBtn[n].classList.remove('hover');
+			}else{
+				pBtn[n].classList.add('hover');
+			}
+		}
+		for(h = 0;h < oLi.length;h++){
+			if(getStyle(oLi[h],'display') == 'list-item'){
+				now = h;
+				break;
+			}
+		}
+		next = parseInt(this.innerHTML) - 1;
+		photoTo(now,next);
+	}
+	pBtn[i].onmouseout = function(){
+		timer = setInterval(function(){
+			now = next;
+			next++;
+			if(next >= oLi.length){
+				next = 0;
+			}
+			photoTo(now,next);
+			pBtn[now].classList.remove('hover');
+			pBtn[next].classList.add('hover');
+		},3000);
+	}
+}
+timer = setInterval(function(){
+	photoTo(now,next);
+	pBtn[now].classList.remove('hover');
+	pBtn[next].classList.add('hover');
+	now = next;
+	next++;
+	if(next >= oLi.length){
+		next = 0;
+	}
+},3000);
+
+function photoTo(now,next){
+	var tLi = document.getElementById('change-seat').getElementsByTagName('li');
+	if(next >= tLi.length){
+		next = 0;
+	}
+	if(now != next){
+		tLi[next].style.display = 'list-item';
+		tLi[next].style.opacity = '0';
+		tLi[next].style.filter = 'alpha(opacity:0)'
+		alpha_1 = 0;
+		alpha_2 = 100;
+		tLi[next].timer = null;
+		clearInterval(tLi[next].timer);
+		tLi[next].timer = setInterval(function(){
+			if(alpha_1 >= 100){
+				clearInterval(tLi[next].timer);
+				tLi[now].style.display = 'none';
+			}else{
+				alpha_1 += 10;
+				alpha_2 -= 10;
+				tLi[now].style.opacity = alpha_2/100;
+				tLi[now].style.filter = 'alpha(opacity:' + alpha_2 + ')'
+				tLi[next].style.opacity = alpha_1/100;
+				tLi[next].style.filter = 'alpha(opacity:' + alpha_1 + ')'
+			}
+		},30);
+	}
+}
+function getStyle(obj,attr){
+	if(obj.currentStyle){
+		return obj.currentStyle[attr];
+	}else{
+		return getComputedStyle(obj,false)[attr];
+	}
+}
+</script>
+</body>
+</html>

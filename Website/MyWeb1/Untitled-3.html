@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+.sss15{
+	width:300px;
+	font-size:20px;
+	overflow:hidden;
+	white-space:nowrap;
+}
+</style>
+</head>
+
+<body>
+<div id="someDiv" class="sss15" ondblclick="toReplace(this)">双击文字实现可编辑状态</div>
+<script type="text/javascript">
+toReplace = function(divElement) { 
+    // 创建一个input元素 
+    var inputElement = document.createElement("input"); 
+    // 把obj里面的元素以及文本内容赋值给新建的inputElement 
+    inputElement.value = divElement.innerHTML; 
+		inputElement.className = divElement.className;
+ 
+    // 用新建的inputElement代替原来的oldDivElement元素 
+    document.body.replaceChild(inputElement, divElement); 
+    // 当inputElement失去焦点时触发下面函数，使得input变成div 
+    inputElement.onblur = function() { 
+        //把input的值交给原来的div 
+        divElement.innerHTML = inputElement.value; 
+        //用原来的div重新替换inputElement 
+        document.body.replaceChild(divElement, inputElement); 
+    } 
+}
+</script>
+</body>
+</html>

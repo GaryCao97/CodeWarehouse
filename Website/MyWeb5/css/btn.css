@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+.btn{
+	cursor: pointer;
+}
+#nav-open{
+	z-index:90;
+	display:block;
+	background:url(../img/btn_nav.png) no-repeat;
+	width:38px;
+	height:28px;
+	position: absolute;
+	top:50px;
+	right:240px;
+}
+#nav-close{
+	z-index:100;
+	display:block;
+	background:url(../img/btn_close.png) no-repeat;
+	width:18px;
+	height:18px;
+	position:fixed;
+	top:50px;
+	right:50px;
+}
+#to-top{
+	z-index:80;
+	display:block;
+	background:url(../img/btn_top.png) no-repeat;
+	width:38px;
+	height:28px;
+	position:fixed;
+	bottom:50px;
+	right:50px;
+}
+#show-back{
+	background:url(../img/btn_back.png) no-repeat;
+	background-size:cover;
+	display:block;
+	width:50px;
+	height:50px;
+	position: absolute;
+	top:50px;
+	left:50px;
+}
+#picture-close{
+	z-index:1001;
+	display:block;
+	background:url(../img/btn_close.png) no-repeat;
+	width:18px;
+	height:18px;
+	position:fixed;
+	top:50px;
+	right:50px;
+}
+#video-prev,#video-next{
+	width: 56px;
+	background: url(../img/btn_prevnext.png) 0 0 no-repeat;
+	height: 112px;
+	display: block;
+}
+#video-next{ 
+	width: 57px;
+	background-position: right bottom;
+
+}
+#video-next:hover,#video-prev:hover{
+	opacity: 0.8;
+}
+#photo-prev,#photo-next{
+	float:left;
+	height:95px;
+	width:95px;
+	background:url(../images/arrow.png) no-repeat 0 5px;
+	position:absolute;
+	left:-205px;
+	top:160px;
+	z-index:10;
+}
+#photo-prev:hover{
+	background-position:0 -116px;
+}
+#photo-next{
+	background-position:-108px 5px;
+}
+#photo-next:hover{
+	background-position:-108px -116px;
+}

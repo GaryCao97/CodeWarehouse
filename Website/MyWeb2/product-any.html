@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产品n-深圳市成辉源科技有限公司</title>
+<link rel="Shortcut Icon" href="img/IMG6.jpg" type="image/x-icon">
+<link href="css/LinkCss.css" type="text/css" rel="stylesheet" />
+<link href="css/ShareCss.css" type="text/css" rel="stylesheet" />
+<link href="css/MainCss.css" type="text/css" rel="stylesheet" />
+<link href="css/ProductCss.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="Leader">
+    <ul id="LeaderList">
+        <li><p id="Title">深圳市成辉源科技有限公司</p></li>
+        <li><a href="index.html" class="NormalLink">首页</a></li>
+        <li><a href="product-index.html" class="NormalLink on">产品展示</a></li>
+        <li><a href="news-index.html" class="NormalLink">新闻动态</a></li>
+        <li><a href="message.html" class="NormalLink">留言板</a></li>
+        <li><a href="about-us.html" class="NormalLink">关于我们</a></li>
+        <li><a href="contact-us.html" class="NormalLink">联系我们</a></li>
+	</ul>
+    <div class='ClearFloat'></div>
+</div>
+<div id="Top">
+	<p></p>
+</div>
+<div id="MainBody">
+    <table cellpadding='0' cellspacing='0'><tbody><tr><td><div id="LeftPart">
+    	<div class="LPThing">
+        	<div class="LPTTitle">
+            	产品搜索
+            </div>
+            <div class="LPTBody" style="padding:5px 8px;">
+            	<input type="text" width="150px" />
+                <input type="button" value=" 搜索 "  />
+            </div>
+        </div>
+    	<div class="LPThing">
+        	<div class="LPTTitle">
+            	产品分类
+            </div>
+            <div class="LPTBody">
+            	<ul id="Classify">
+                	<li><a href="#" title="分类1" class="NormalLink">分类1</a></li>
+                    <li><a href="#" title="分类2" class="NormalLink">分类2</a></li>
+                </ul>
+            </div>
+        </div>
+    	<div class="LPThing">
+        	<div class="LPTTitle">
+            	在线客服
+            </div>
+            <div class="LPTBody">
+            	<ul id="Kefu">
+                	<li><a href="#" class="NormalLink">客服1</a></li>
+                	<li><a href="#" class="NormalLink">客服2</a></li>
+                </ul>
+                <div id="KefuTime">
+                	<table cellpadding="0" cellspacing="0"><tbody><tr><td><div id="WorkTimeImg"></div></td><td style="vertical-align:middle;" id="WorkTime">工作时间</td></tr></tbody></table>
+                    <p>周一至周五 ：8:30-17:30</p>
+                    <p>周六至周日 ：9:00-17:00</p>
+                </div>
+            </div>
+        </div>
+    	<div class="LPThing">
+        	<div class="LPTTitle">
+            	联系方式
+            </div>
+            <div class="LPTBody" id="ContactStyle">
+            	<p>联系人：</p>
+                <p>电 话：</p>
+            	<p>邮 箱：</p>
+                <p>地 址：</p>
+            </div>
+        </div>
+    </div></td>
+    <td><div id="RightPart">
+        <div class="RPThing">
+            <div class="RPTTitle">
+                <p class="RPTTName">产品详情</p>
+            </div>
+            <div class="RPTBody">
+            	<table style="padding-top:20px;"><tbody>
+                <tr>
+                    <td id="LeftImg">
+                    	<div class="Show"><img src="img/0.jpg" /></div>
+                    	<div class="Hide"><img src="img/1.jpg" /></div>
+                    	<div class="Hide"><img src="img/2.jpg" /></div>
+                    	<div class="Hide"><img src="img/3.jpg" /></div>
+                    	<div class="Hide"><img src="img/4.jpg" /></div>
+                    	<div class="Hide"><img src="img/5.jpg" /></div>
+                    </td>
+                    <td id="RightText">
+                    	<div id="RTTitle"><span>产品n</span></div>
+                        <table style="padding-top:15px;"><tbody><tr>
+                        <td class="LittleTitle">编号</td><td style="font-size:12px;width:20px;">:</td><td style="font-size:12px;color:#555">A000n</td>
+                        </tr>
+                        <tr>
+                        <td class="LittleTitle">价格</td><td style="font-size:12px;width:20px;">:</td><td id="Value">￥0.00</td>
+                        </tr></tbody></table>
+                    </td>
+                </tr>
+                <tr><td>
+                	<div id="ChangeTab">
+                    	<div id="LeftTab"></div>
+                        <div id="PhotoTab">
+                        	<a><img src="img/0.jpg" /></a>
+                        	<a><img src="img/1.jpg" /></a>
+                        	<a><img src="img/2.jpg" /></a>
+                        	<a><img src="img/3.jpg" /></a>
+                        	<a><img src="img/4.jpg" /></a>
+                        	<a><img src="img/5.jpg" /></a>
+                        </div>
+                        <div id="RightTab"></div>
+                        <script type="text/javascript">
+							var oA = document.getElementById('PhotoTab').getElementsByTagName('a');
+							var oImgDiv = document.getElementById('LeftImg').getElementsByTagName('div');
+							for(i = 0; i < oA.length; i++){
+								oA[i].index = i;
+								oA[i].onmouseover = function(){
+									for(n = 0; n < oImgDiv.length; n++){
+										oImgDiv[n].className = 'Hide';
+									}
+									oImgDiv[this.index].className = 'Show';
+								}
+							}
+							function Seat(){
+								for(i = 0; i < oA.length; i++){
+									if(i > 0){
+										oA[i].style.left = oA[i-1].offsetLeft + 80 + 'px';
+									}
+								}
+							}
+							Seat();
+							var This = document.getElementById('PhotoTab');
+							var oL = document.getElementById('LeftTab');
+							var oR = document.getElementById('RightTab');
+							var fA = oA[0];
+							var lA = oA[oA.length-1];
+							oL.onmouseover = function(){
+								This.time = setInterval(function(){
+									if(lA.offsetLeft <= 255){
+										clearInterval(This.time);
+									}
+									for(x = 0;x < oA.length;x++){
+										oA[x].style.left = oA[x].offsetLeft - 1 + 'px';
+									}
+								},30);
+								for(x = 0;x < oA.length;x++){}
+							}
+							oL.onmouseout = function(){
+								clearInterval(This.time);
+							}
+							oR.onmouseover = function(){
+								This.time = setInterval(function(){
+									if(fA.offsetLeft >= 0){
+										clearInterval(This.time);
+									}
+									for(x = 0;x < oA.length;x++){
+										oA[x].style.left = oA[x].offsetLeft + 1 + 'px';
+									}
+								},30);
+								for(x = 0;x < oA.length;x++){}
+							}
+							oR.onmouseout = function(){
+								clearInterval(This.time);
+							}
+                        </script>
+                    </div>
+        			<div class='ClearFloat'></div>
+                </td></tr>
+                <tr><td style="padding-top:20px;">
+                	<div id='ShareInfo'>
+            			<div id="ShareTo">分享到：</div>
+            			<div id="ShareCtrl">
+                			<a hidefocus='true' title='复制网址'  href='javascript:;'  onclick=""><div class='ShareIcon Copy'></div></a>
+                			<a hidefocus='true' title='分享到腾讯微博' href='javascript:;' onclick=''><div class='ShareIcon QQWeibo'></div></a>
+                			<a hidefocus='true' title='分享到新浪微博' href='javascript:;' onclick=''><div class='ShareIcon SinaWeibo'></div></a>
+                			<a hidefocus='true' title='分享到QQ空间' href='javascript:;' onclick=''><div class='ShareIcon QQZone'></div></a>
+                			<a hidefocus='true' title='分享到开心网' href='javascript:;' onclick=''><div class='ShareIcon KaiXin001'></div></a>
+                			<a hidefocus='true' title='分享到人人网' href='javascript:;' onclick=''><div class='ShareIcon RenRen'></div></a>
+                			<a hidefocus='true' title='分享到豆瓣网' href='javascript:;' onclick=''><div class='ShareIcon DouBan'></div></a>
+                			<a hidefocus='true' title='分享到网易微博' href='javascript:;' onclick=''><div class='ShareIcon NeteaseWeibo'></div></a>
+                			<a hidefocus='true' title='分享到百度贴吧' href='javascript:;' onclick=''><div class='ShareIcon BaiduTieba'></div></a>
+            			</div>
+        			</div>
+        			<div class='ClearFloat'></div>
+                </td></tr>
+                </tbody></table>
+                <div id="ProductBody">
+                    <div id="TabTitle">
+                       	<a class="On">产品详情</a>
+                       	<a>产品详情2</a>
+                       	<a>产品详情3</a>
+                    </div>
+                    <div class='ClearFloat'></div>
+                    <div id="TabBody">
+                    	<p>请编辑产品详情内容</p>
+                    	<p class="Off">请编辑产品详情内容2</p>
+                    	<p class="Off">请编辑产品详情内容3</p>
+                    </div>
+                </div>
+                <script type="text/javascript">
+					var oT = [];
+					oT[0] = document.getElementById("TabTitle").getElementsByTagName('a');
+					oT[1] = document.getElementById("TabBody").getElementsByTagName('p');
+					for(i = 0;i<oT[0].length;i++){
+						oT[0][i].index = i;
+						oT[0][i].onclick = function(){
+							for(n = 0;n<oT[0].length;n++){
+								oT[0][n].className = '';
+								oT[1][n].className = 'Off';
+							}
+							this.className = 'On';
+							oT[1][this.index].className = '';
+						}
+					}
+                </script>
+                <div style="text-align:center"><ul id="Turn">
+                    <li><a>上一个</a></li>
+                    <li><a>下一个</a></li>
+                </ul></div>
+                <div class='ClearFloat'></div>
+            </div>
+        </div>
+    </div></td></tr></tbody></table>
+</div>
+<div id="Tail">
+	<div>
+        <a href="contact-us.html" class="NormalLink">联系我们</a>
+        <a href="about-us.html" class="NormalLink">关于我们</a>
+        <a href="message.html" class="NormalLink">留言板</a>
+    </div>
+	<div>Copyright © 2016 OurFamily.com All Rights Reserved | 京ICP备 1234567 号</div>
+</div>
+</body>
+</html>

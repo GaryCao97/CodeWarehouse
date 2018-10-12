@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+#Message{
+	padding: 0;
+}
+#MessageCreate *{
+	color: #aaa;
+	font-size: 12px;
+}
+#MessageCreate table{
+	padding:3px 0;
+}
+#MessageCreate p{
+	padding: 5px 0;
+	font-size: 16px;
+	font-weight: bolder;
+}
+#MessageCreate td{
+	vertical-align: middle;
+}
+.LittleTitle{
+	width: 80px;
+	text-align: right;
+}
+.LittleBody{
+	width: 135px;
+	text-align: left;
+}
+.LText{
+	width: 130px;
+}
+.Yanz{
+	width: 50px;
+}
+#Button{
+	width: 80px;
+	height: 25px;
+	margin-right: 5px;
+}
+#Pages{
+	list-style:none;
+	width:99%;
+	margin:0 auto;
+	font-size:13px;
+	color:#aaa;
+}
+#Pages li{
+	float: left;
+	margin: 10px;
+}

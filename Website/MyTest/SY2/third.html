@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<title>第三点</title>
+	</head>
+	<body>
+    	<form>
+        	<span>请输入圆的半径</span><input type="text" id="radio" /><input type="button" id="calculate" value="计算" /><br/>
+            <span>面积：</span><input type="text" id="area" /><br/>
+            <span>周长：</span><input type="text" id="column" />
+        </form>
+        <script type="text/javascript">
+			var btn_1 = document.getElementById('calculate');
+			btn_1.onclick = function(){
+				var r = parseFloat(document.getElementById('radio').value);
+				var s = Math.PI * r * r,
+					c = 2 * Math.PI * r;
+				document.getElementById('area').value = s;
+				document.getElementById('column').value = c;
+			}
+		</script>
+    	<form>
+        	<span>请输入一个1-100之间的数字</span><input type="text" id="num" /><input type="button" id="sure" value="确认" />
+        </form>
+        <table id="table" cellpadding="10" cellspacing="0"><tbody>
+        </tbody></table>
+        <script type="text/javascript">
+			var btn = document.getElementById('sure');
+			btn.onclick = function(){
+				var num = parseInt(document.getElementById('num').value);
+				if(num>=1 && num<=100){
+					var table = document.getElementById('table');
+					table.innerHTML = '<tbody></tbody>';
+					for(var a = 1;a<=num;a++){
+						var tr = document.createElement('tr');
+						for(var b=1;b<=a;b++){
+							var td = document.createElement('td');
+							td.innerHTML = b + '*' + a + '=' + a*b;
+							tr.appendChild(td);
+						}
+						table.appendChild(tr);
+					}
+				}else{
+					alert('输入有误，请重新输入！');
+				}
+			}
+		</script>
+    </body>
+</html>

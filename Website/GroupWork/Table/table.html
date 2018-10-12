@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>表格</title>
+<style type="text/css">
+</style>
+	<link rel="stylesheet" type="text/css" href="css/table.css" />
+	<script type="text/javascript" src="js/arrayNewFunction.js"></script>
+</head>
+
+<body>
+    <div id="main-body">
+        <div id="buttons">
+            <a class="button buttons-create"><span>新建</span></a>
+            <a class="button buttons-edit disabled"><span>编辑</span></a>
+            <a class="button buttons-remove disabled"><span>移除</span></a>
+        </div>
+        <div id="search-box">
+            <label>
+                <span>搜索:</span>
+                <input />
+            </label>
+        </div>
+        <table id="main-table">
+        <thead>
+            <tr><th class="select-checkbox disabled" id="checkbox"></th><th id="number" class="sorting-both">学号</th><th id="name" class="sorting-both">姓名</th><th id="age" class="sorting_both">年龄</th><th id="gender" class="sorting-both">性别</th><th id="profession" class="sorting-both">专业</th><th id="position" class="sorting-both">职位</th><th id="changeTime" class="sorting-both">更改时间</th></tr>
+        </thead>
+        <tbody id="main-table-tbody">
+        </tbody>
+        </table>
+        <div id="table_info">
+            <span></span>
+            <span></span>
+        </div>
+        <div id="table_page">
+            <a class="page_button previous">上一页</a>
+            <span>
+            </span>
+            <a class="page_button next">下一页</a>
+        </div>
+    </div>
+	<script type="text/javascript" src="js/information.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

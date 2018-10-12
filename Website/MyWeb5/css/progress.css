@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+#progress{
+	width: 1200px;
+	text-align:center;
+	margin:0 auto;
+	background: rgba(255,153,51,.6);
+}
+#progress-title-word{
+	padding-top:20px;
+	font: 40px "微软雅黑" , "宋体";
+}
+#progress-body{
+	padding:10px 0;
+}
+#progress-body>table{
+	margin:0 auto;
+}
+#progress-body p{
+	width:360px;
+	border:solid 2px #000;
+	border-radius: 20px;
+	padding:10px;
+	font-size:16px;
+	line-height:1.2em;
+}
+#vertical-line{
+	position:absolute;
+}

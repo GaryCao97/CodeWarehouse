@@ -1,0 +1,49 @@
+﻿<!doctype html>   
+<html>   
+<head>   
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />   
+<title>Image preview example</title>   
+<script type="text/javascript">   
+var loadImageFile = (function () {   
+    if (window.FileReader) {   
+        var oPreviewImg = null, 
+            oFReader = new window.FileReader();
+        oFReader.onload = function (oFREvent) {   
+            if (!oPreviewImg) {
+                var newPreview = document.getElementById("imagePreview");
+                oPreviewImg = new Image();
+                oPreviewImg.style.width = (newPreview.offsetWidth).toString() + "px";
+                oPreviewImg.style.height = (newPreview.offsetHeight).toString() + "px";
+                newPreview.appendChild(oPreviewImg);
+            }
+            oPreviewImg.src = oFREvent.target.result;
+        };
+        return function (This) {
+            var aFiles = document.getElementById("imageInput").files;
+            oFReader.readAsDataURL(aFiles[0]);
+        }
+    }
+})();
+window.onload = function(){
+    document.getElementById("imageInput").onchange = function(){
+        loadImageFile(this);
+    }
+}
+</script>   
+<style type="text/css">   
+#imagePreview {   
+    width: 160px;   
+    height: 120px;   
+}
+</style>   
+</head>   
+<body>   
+<div id="imagePreview">   
+</div>   
+<form name="uploadForm">   
+<p>   
+<input id="imageInput" type="file" accept="image/*" name="myPhoto" /><br />   
+<input type="submit" value="Send" /></p>   
+</form>   
+</body>   
+</html>

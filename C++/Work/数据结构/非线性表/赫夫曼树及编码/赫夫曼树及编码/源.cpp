@@ -1,0 +1,92 @@
+#include<iostream>  
+#include<cstdio>  
+#include<cstring>  
+using namespace std;
+struct HTNode {        // 树中结点的结构  
+	unsigned int weight;
+	unsigned int parent, lchild, rchild;
+};
+struct HTCode {
+	char data;      // 待编码的字符  
+	int weight;     // 字符的权值  
+	char *code;   // 字符的编码  
+};
+void Init(HTCode *hc, int n) {
+	// 初始化，读入待编码字符的个数n，从键盘输入n个字符和n个权值  
+	int i;
+	cout << "请输入" << n << " 个字符" << endl;
+	for (i = 1; i <= n; ++i)
+		cin >> hc[i].data;
+	cout << "请按顺序输入" << n << "个字符的权重" << endl;
+	for (i = 1; i <= n; ++i)
+		cin >> hc[i].weight;
+}
+void Select(HTNode *ht, int k, int &s1, int &s2) {
+	// ht[1...k]中选择parent为0，并且weight最小的两个结点，其序号由指针变量s1，s2指示
+	int i;
+	for (i = 1; i <= k && ht[i].parent != 0; ++i) {
+		; ;
+	}
+	s1 = i;
+	for (i = 1; i <= k; ++i) {
+		if (ht[i].parent == 0 && ht[i].weight<ht[s1].weight)
+			s1 = i;
+	}
+	for (i = 1; i <= k; ++i) {
+		if (ht[i].parent == 0 && i != s1)
+			break;
+	}
+	s2 = i;
+	for (i = 1; i <= k; ++i) {
+		if (ht[i].parent == 0 && i != s1 && ht[i].weight<ht[s2].weight)
+			s2 = i;
+	}
+}
+void HuffmanCoding(HTNode *ht, HTCode *hc, int n) {
+	// 构造Huffman树ht，并求出n个字符的编码
+	char *cd = (char*)malloc(n * sizeof(char));
+	int i, m, c, f, s1, s2, start;
+	m = 2 * n - 1;
+	for (i = 1; i <= m; ++i) {
+		if (i <= n)
+			ht[i].weight = hc[i].weight;
+		else
+			ht[i].weight = 0;
+		ht[i].parent = ht[i].lchild = ht[i].rchild = 0;
+	}
+	for (i = n + 1; i <= m; ++i) {
+		Select(ht, i - 1, s1, s2);
+		ht[s1].parent = i;
+		ht[s2].parent = i;
+		ht[i].lchild = s1;
+		ht[i].rchild = s2;
+		ht[i].weight = ht[s1].weight + ht[s2].weight;
+	}
+	cd[n - 1] = '\0';
+	for (i = 1; i <= n; ++i) {
+		start = n - 1;
+		for (c = i, f = ht[i].parent; f; c = f, f = ht[f].parent) {
+			if (ht[f].lchild == c)
+				cd[--start] = '0';
+			else
+				cd[--start] = '1';
+		}
+		hc[i].code = (char*)malloc((n - start + 1) * sizeof(char));
+		strcpy(hc[i].code, &cd[start]);
+	}
+}
+int main(){
+	int i, n;
+	HTNode *ht;
+	HTCode *hc;
+	cout << "请输入字符个数 n = ";
+	cin >> n;
+	hc = (HTCode*)malloc((n + 1) * sizeof(HTCode));
+	ht = (HTNode *)malloc((2 * n) * sizeof(HTNode));
+	Init(hc, n); // 初始化
+	HuffmanCoding(ht, hc, n); // 构造Huffman树，并形成字符的编码
+	cout << endl;
+	for (i = 1; i <= n; ++i)
+		cout << hc[i].data << "-----" << hc[i].code << endl;
+	return 0;
+}

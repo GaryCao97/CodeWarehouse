@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>实验一——表格</title>
+<style>
+#grade{
+	vertical-align:middle;
+	margin:0 auto;
+}
+#grade td{
+	text-align:center;
+}
+.title{
+	background-color:rgba(255,255,102,.5);
+	height:30px;
+}
+.lesson{
+	width:80px;
+	height:30px;
+	background-color:rgba(204,51,0,.3);
+}
+.odd{
+	background-color:rgba(0,204,255,.5);
+	height:30px;
+}
+.even{
+	background-color:rgba(0,255,153,.5);
+	height:30px;
+}
+.average{
+	background-color:rgba(255,102,0,.5);
+	height:30px;
+}
+#product{
+	vertical-align:middle;
+	margin:0 auto;
+}
+#product td{
+	text-align:center;
+	min-height:40px !important;
+}
+#photo{
+	background:url(img.png) no-repeat;
+	background-size:cover;
+	width:200px;
+	height:240px;
+}
+.property td{
+	text-align:left !important;
+}
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+	console.log(navigator.userAgent);
+</script>
+<table cellpadding="0" cellspacing="0" id="grade" border="1px">
+    <tr class="title">
+    	<td rowspan="2" width="100">学号</td>
+    	<td rowspan="2" width="80">姓名</td>
+        <td colspan="5">第一学期</td>
+        <td colspan="5">第二学期</td>
+    </tr>
+    <tr class="title">
+    	<td class="lesson">课程一</td>
+    	<td class="lesson">课程二</td>
+    	<td class="lesson">课程三</td>
+    	<td class="lesson">课程四</td>
+    	<td class="lesson">课程五</td>
+    	<td class="lesson">课程一</td>
+    	<td class="lesson">课程二</td>
+    	<td class="lesson">课程三</td>
+    	<td class="lesson">课程四</td>
+    	<td class="lesson">课程五</td>
+    </tr>
+    <tr class="odd">
+    	<td>66666001</td>
+    	<td>肖炳义</td>
+    	<td>72</td>
+    	<td>77</td>
+    	<td>96</td>
+    	<td>85</td>
+    	<td>62</td>
+    	<td>86</td>
+    	<td>74</td>
+    	<td>96</td>
+    	<td>85</td>
+    	<td>62</td>
+   	</tr>
+    <tr class="even">
+    	<td>66666002</td>
+    	<td>陆仁贾</td>
+    	<td>83</td>
+    	<td>77</td>
+    	<td>86</td>
+    	<td>77</td>
+    	<td>96</td>
+    	<td>86</td>
+    	<td>83</td>
+    	<td>77</td>
+    	<td>60</td>
+    	<td>84</td>
+   	</tr>
+    <tr class="odd">
+    	<td>66666003</td>
+    	<td>逡众丁</td>
+    	<td>89</td>
+    	<td>77</td>
+    	<td>96</td>
+    	<td>85</td>
+    	<td>96</td>
+    	<td>85</td>
+    	<td>72</td>
+    	<td>88</td>
+    	<td>78</td>
+    	<td>72</td>
+   	</tr>
+    <tr class="even">
+    	<td>66666004</td>
+    	<td>张三</td>
+    	<td>66</td>
+    	<td>86</td>
+    	<td>77</td>
+    	<td>96</td>
+    	<td>85</td>
+    	<td>86</td>
+    	<td>76</td>
+    	<td>89</td>
+    	<td>96</td>
+    	<td>93</td>
+   	</tr>
+    <tr class="average">
+    	<td colspan="2">平均分</td>
+    	<td>77.5</td>
+    	<td>79.25</td>
+    	<td>88.75</td>
+    	<td>85.75</td>
+    	<td>84.75</td>
+    	<td>85.75</td>
+    	<td>76.25</td>
+    	<td>87.5</td>
+    	<td>79.75</td>
+    	<td>77.75</td>
+    </tr>
+</table>
+<br/>
+<table border="1" cellspacing="0" cellpadding="0" id="product">
+  <tr>
+    <td><div id="photo"></div></td>
+    <td>基本信息</td>
+  </tr>
+  <tr>
+    <td colspan="2" height="30px">基本参数</td>
+  </tr>
+  <tr>
+    <td>型号一</td>
+    <td>
+    <table cellspacing="0" cellpadding="0" class="property">
+    	<tr><td width="60px">编号：</td><td width="240px" height="30px">6666868001</td></tr>
+    	<tr><td height="30px">尺寸：</td><td>300 mm * 200 mm * 250 mm</td></tr>
+    	<tr><td height="30px">材料：</td><td>高密度聚乙烯、线性低密度聚乙烯</td></tr>
+    	<tr><td height="30px">功能：</td><td>结构承载</td></tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td>型号二</td>
+    <td>
+    <table cellspacing="0" cellpadding="0" class="property">
+    	<tr><td width="60px" height="30px">编号：</td><td width="240px">6666868002</td></tr>
+    	<tr><td height="30px">尺寸：</td><td>200 mm * 200 mm * 300 mm</td></tr>
+    	<tr><td height="30px">材料：</td><td>低密度聚乙烯、一般级聚苯乙烯</td></tr>
+    	<tr><td height="30px">功能：</td><td>结构承载</td></tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" height="30px">产品特点</td>
+  </tr>
+  <tr>
+    <td height="30px">型号一</td>
+    <td>能玩游戏</td>
+  </tr>
+  <tr>
+    <td height="30px">型号二</td>
+    <td>能看电影</td>
+  </tr>
+</table>
+<br/>
+
+</body>
+</html>

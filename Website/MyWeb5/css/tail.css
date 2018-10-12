@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+#tail{
+	width:100%;
+	background:rgba(153,153,153,.8);
+	min-height:50px;
+}
+#tail>p{
+	text-align:center;
+	padding-top:16px;
+}

@@ -1,0 +1,6 @@
+#include <ctime>
+clock_t mytime;
+
+mytime = clock(); //记下开始的时间
+//做事情...
+mytime = clock() - mytime; //得到的值就是完成任务的时间，以毫秒计算。
